@@ -9,7 +9,7 @@ def parseFile(filename):
     with open(filename, 'r') as file:
         for line in file:
             line = line.strip()
-            if line[0] == "*": continue
+            if len(line) == 0 or line[0] == "*": continue
             token, value = line.split(' ', 1)
             if token == "AC":
                 # new site
